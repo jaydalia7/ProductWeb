@@ -1,0 +1,19 @@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ProductName</th>
+            <th scope="col">ProductPrice</th>
+            <th scope="col">ProductStock</th>
+            <th scope="col">Action</th>
+          </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of productsList">
+          <td>{{dataItem.productName}}</td>
+          <td>{{dataItem.productPrice}}</td>
+          <td>{{dataItem.productStock}}</td>
+          <td><a href="#" (click)="DeleteProduct(dataItem.productId)">Delete</a>
+        </tr>
+      </tbody>
+</table> 
+
